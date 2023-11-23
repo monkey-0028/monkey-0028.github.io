@@ -3,11 +3,7 @@ body{
 }
 
 
-p{
-    margin-left: 35%;
-    font-size: 18px;
-    margin-top: 18px;
-}
+
 #intro-heading{
     /* text-align: center; */
     /* margin-left: 40%; */
@@ -28,43 +24,5 @@ p{
     /* margin-bottom: 0; */
 }
 #about{
-    margin-left: 20%;
-    margin-top: 40px;
-}
-
-#q{
-    margin-left: 795px;
-    margin-top: 60px;
-}
-
-table,td,th{
-    border: 1px solid;
-    border-collapse: collapse;
-}
-th,td{
-    padding: 25px;
-    width: 220px;
-
-    /* margin-left: 800px; */
-}
-
-ol,ul{
-    margin-left: 850px;
-}
-li{
-    font-size: 18px;
-    padding: 10px;
-}
-
-
-.imgtag{
-    margin-left: 25%;
-}
-
-.data{
-    margin-left: 35%;
-    margin-top: 2%;
-}
-#lastline{
-    margin-bottom: 10%;
+    text-align: center;
 }
