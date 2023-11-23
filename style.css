@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+}
+
+
+p{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 18px;
+}
+#intro-heading{
+    text-align: center;
+    margin-left: 55px;
+    color: #067106;
+
+}
+
+#myphoto{
+    margin-left: 45%;
+    text-align: center;
+    border-radius: 100%;
+}
+
+#heading_message{
+    font-size: 25px;
+    text-align: center;
+    color: #65775c;
+    margin-bottom: 0;
+}
+#about{
+    margin-left: 800px;
+    margin-top: 40px;
+}
+
+#q{
+    margin-left: 795px;
+    margin-top: 60px;
+}
+
+table,td,th{
+    border: 1px solid;
+    border-collapse: collapse;
+}
+th,td{
+    padding: 25px;
+    width: 220px;
+
+    /* margin-left: 800px; */
+}
+
+table{
+    margin-left: 850px;
+    margin-top: 90px;
+}
+
+#skill{
+    margin-left: 777px;
+    margin-top: 80px;
+}
+ol,ul{
+    margin-left: 850px;
+}
+li{
+    font-size: 18px;
+    padding: 10px;
+}
+#hobbies{
+margin-left: 805px;
+margin-top: 50px;
+margin-bottom: 20px;
+}
+
+#insta{
+    margin-left: 1200px;
+}
