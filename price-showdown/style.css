@@ -1,32 +1,134 @@
-#body-container{
-    background-color: #544dd3;
+
+.container{
     display: flex;
-    gap: 20px;
+    height: 95vh;
+    gap: 50px;
+    justify-content: center;
+}
+.container>*{
+    flex-shrink: 0;
+    flex-grow: 0;
 }
 
-.rectangle{
-    background-color: #9897c9;
-    height: 20px;
-    width: 20px;
+.item{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    position: relative;
+    width: 220px;
+    height: 500px;
+    border-radius: 10px;
+    top: 20%;
+    align-items: center;
+    box-shadow: 2px 1px;
 }
-.circle{
-    background-color: #9897c9;
-    height: 40px;
-    width: 40px;
+.head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0px;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    border-radius: 10px 10px 0px 0px;
+}
+.price-tag{
+    margin: 0px;
+    font-family: "Teko";
+    font-size: 70px;  
+    font-weight: 500; 
+}
+.price-tag>span{
+    font-family:monospace;
+    font-size: 20px;
+}
+.hr{
+    width: 30%;
+    height: 2px;
+    background-color: grey;
+    margin-bottom: 10px;
+}
+
+.head *{
+    color: white;
+}
+
+#red{
+    background-color: #d9566e;
+}
+
+#blue{
+    background-color: #3a7997;
+}
+#green{
+    background-color: #9abdbe;
+}
+.head>span{
+    font-family: "Oswald";
+    font-size: 28px;
+    font-weight: 600;
+}
+.head>div{
+    width: 80%;
+    height: 2px;
+    background-color: whitesmoke;
+    margin-bottom: 4px;
+}
+.head p{
+    margin:0px;
+    margin-bottom: 4px;
+}
+
+.buy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 30px;
+    border-radius: 20%/50%;
+    margin-top: 30px;
+}
+.item>.buy{
+    color: whitesmoke;
+    font-weight: 700;
+    }
+
+#red_buy{
+    background-color: #d9566e;
+}
+#blue_buy{
+    background-color: #3a7997;
+}
+#green_buy{
+    background-color: #9abdbe;
+}
+
+.line{
+    display: flex;
+    gap: 4px;
+    flex-direction: row;
+    width: 80%;
+    height: 30px;
+    align-items: center;
+    margin: 10px 0px;
+}
+.line>div{
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
     border-radius: 50%;
 }
-#curved{
-    height: 60px;
-    width: 60px;
-    border-radius: 15%;
+.line p{
+    margin: 0px;
+    align-self: center;
 }
-#more-curved-1{
-    height: 50px;
-    width: 50px;
-    border-radius: 30%;
+
+#red_con .line div{
+    background-color: #d9566e;
 }
-#more-curved-2{
-    height: 100px;
-    width: 100px;
-    border-radius: 10%;
+#green_con .line div{
+    background-color:#9abdbe;
+}
+#blue_con .line div{
+    background-color: #3a7997;
 }
