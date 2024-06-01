@@ -1,0 +1,32 @@
+#body-container{
+    background-color: #544dd3;
+    display: flex;
+    gap: 20px;
+}
+
+.rectangle{
+    background-color: #9897c9;
+    height: 20px;
+    width: 20px;
+}
+.circle{
+    background-color: #9897c9;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+#curved{
+    height: 60px;
+    width: 60px;
+    border-radius: 15%;
+}
+#more-curved-1{
+    height: 50px;
+    width: 50px;
+    border-radius: 30%;
+}
+#more-curved-2{
+    height: 100px;
+    width: 100px;
+    border-radius: 10%;
+}
