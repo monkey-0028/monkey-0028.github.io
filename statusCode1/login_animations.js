@@ -61,20 +61,43 @@ const pinless_checkbox = document.querySelector(".pin > svg")
 var toggle_pinless_checkbox = 0 //0 means uncheck
 pinless_checkbox.addEventListener("click",function(){
     var angle = 0
+    var op = 100
+    var vl = 0
+    const object1 = document.querySelector("#pass")
+    const object2 = document.querySelector(".pin")
     function animate_pinless_checkbox(){
         angle += 10
+        vl += 1
         if((angle > 200) && (toggle_pinless_checkbox == 0)){
             pinless_checkbox.innerHTML = `<path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z"/>`
         }
         if((angle > 200) && (toggle_pinless_checkbox == 1)){
             pinless_checkbox.innerHTML = `<path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>`
         }
+        if(toggle_pinless_checkbox == 0){
+            op -= 3
+            object1.style.top = `-${vl}px`
+            object1.style.opacity = `${op}%`
+        }
+        if(toggle_pinless_checkbox == 1){
+            op +=3
+           // object1.style.top = `${vl}px`
+            object1.style.opacity = `${op}%`
+        }
+
 
         
         pinless_checkbox.style.transform = `rotate(${angle}deg)`
 
         if(angle == 360){
             toggle_pinless_checkbox = (toggle_pinless_checkbox + 1)%2
+            if(toggle_pinless_checkbox == 1){
+                object1.style.display = "none"
+            }
+            else{
+                object1.style.display="block"
+            }
+            
         }
 
         if(angle!=360){
@@ -82,33 +105,6 @@ pinless_checkbox.addEventListener("click",function(){
         }
     }
     requestAnimationFrame(animate_pinless_checkbox)
-    // hiding the password phrase if checkbox is ticket. i.e 1
-    const start_time = performance.now()
-    const object1 = document.querySelector("#pass")
-    const object2 = document.querySelector(".pin")
-    object1.style.position = "relative"
-    object2.style.position = "relative"
-    var vl = 0
-    var op = 100
-    function animate_dropdown(timestamp){
-        var ellapse = timestamp - start_time
-        vl += 2
-        op -= 5
-        object1.style.top = `-${vl}px`
-        object2.style.top = `-${vl}px`
-        object1.style.opacity = `${op}%`
-
-        if(op == 0){
-            object1.style.display = "none"
-        }
-
-        if(op != 0){
-            requestAnimationFrame(animate_dropdown)
-        }
-
-    }
-    requestAnimationFrame(animate_dropdown)
-
 })
 
 
